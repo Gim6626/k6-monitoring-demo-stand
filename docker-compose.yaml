@@ -1,0 +1,59 @@
+version: '3.8'
+
+networks:
+  monitoring:
+    driver: bridge
+
+volumes:
+  prometheus-data: {}
+  grafana-data: {}
+
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    restart: unless-stopped
+    volumes:
+      - ./prometheus.yaml:/etc/prometheus/prometheus.yaml
+      - prometheus-data:/var/lib/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yaml'
+      - '--storage.tsdb.path=/var/lib/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--web.enable-lifecycle'
+    ports:
+      - 9090:9090
+    user: 'root'
+    networks:
+      - monitoring
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  grafana:
+    image: grafana/grafana-oss:latest
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    user: 'root'
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./prometheus-datasource.yaml:/etc/grafana/provisioning/datasources/prometheus.yaml
+    networks:
+      - monitoring
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  statsd-exporter:
+    image: prom/statsd-exporter
+    restart: unless-stopped
+    ports:
+      - 9102:9102
+      - 8125:8125/udp
+    volumes:
+      - ./statsd.yaml:/etc/statsd.yaml
+    command:
+      - '--statsd.mapping-config=/etc/statsd.yaml'
+      - '--statsd.listen-udp=:8125'
+      - '--web.listen-address=:9102'
+    networks:
+      - monitoring
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
