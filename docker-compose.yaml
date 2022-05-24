@@ -37,6 +37,8 @@ services:
     volumes:
       - grafana-data:/var/lib/grafana
       - ./prometheus-datasource.yaml:/etc/grafana/provisioning/datasources/prometheus.yaml
+      - ./universal-dashboard.yaml:/etc/grafana/provisioning/dashboards/universal.yaml
+      - ./grafana-dashboards:/var/lib/grafana/dashboards
     networks:
       - monitoring
     extra_hosts:
