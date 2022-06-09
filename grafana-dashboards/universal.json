@@ -329,7 +329,7 @@
             "exemplar": true,
             "expr": "sum(k6_http_req_failed{instance=~\"$worker_instance\"})",
             "interval": "",
-            "legendFormat": "",
+            "legendFormat": "Requests",
             "refId": "A"
           }
         ],
