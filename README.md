@@ -22,6 +22,5 @@ Then open http://localhost:3000 and explore Prometheus metrics starting with `k6
 
 # Note
 
-Tested on GNU/Linux (Ubuntu 22.04) only, but should be cross-platform
-solution. The only platform-specific thing is `extra_hosts` in
-`docker-compose.yaml`.
+Tested on GNU/Linux (Ubuntu 22.04) and on macOS Monterey (v12.2.1) only, but should be cross-platform solution. The
+only platform-specific thing is `extra_hosts` in `docker-compose.yaml` for Docker on GNU/Linux.
