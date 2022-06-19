@@ -1,5 +1,5 @@
 global:
-  scrape_interval: 5s
+  scrape_interval: 1s
 
 scrape_configs:
   # optional: this makes the metrics available to us about Promethus itself.
