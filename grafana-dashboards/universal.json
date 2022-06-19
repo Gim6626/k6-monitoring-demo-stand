@@ -238,7 +238,7 @@
               "uid": "PBFA97CFB590B2093"
             },
             "exemplar": true,
-            "expr": "sum(rate(k6_http_reqs{instance=~\"$worker_instance\"}[30s]))",
+            "expr": "k6_http_reqs{instance=~\"$worker_instance\"}",
             "interval": "",
             "legendFormat": "RPS",
             "refId": "A"
@@ -552,7 +552,7 @@
               "uid": "PBFA97CFB590B2093"
             },
             "exemplar": true,
-            "expr": "sum by(instance)(rate(k6_http_reqs{instance=~\"$worker_instance\"}[30s]))",
+            "expr": "sum by (instance)(k6_http_reqs{instance=~\"$worker_instance\"})",
             "interval": "",
             "legendFormat": "RPS",
             "refId": "A"
@@ -867,7 +867,7 @@
               "uid": "PBFA97CFB590B2093"
             },
             "exemplar": true,
-            "expr": "sum by (subscenario)(rate(k6_Requests_Counter{subscenario=~\"$subscenario\"}[30s]))",
+            "expr": "sum by (subscenario)(k6_Requests_Counter{subscenario=~\"$subscenario\"})",
             "interval": "",
             "legendFormat": "RPS",
             "refId": "A"
