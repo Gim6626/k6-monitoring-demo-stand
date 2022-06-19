@@ -238,7 +238,7 @@
               "uid": "PBFA97CFB590B2093"
             },
             "exemplar": true,
-            "expr": "k6_http_reqs{instance=~\"$worker_instance\"}",
+            "expr": "sum(k6_http_reqs{instance=~\"$worker_instance\"})",
             "interval": "",
             "legendFormat": "RPS",
             "refId": "A"
