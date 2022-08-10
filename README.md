@@ -15,7 +15,7 @@ $ docker-compose up -d
 Replace `PATH_TO_K6_SCENARIO` with path to your scenario and run:
 
 ```
-$ K6_STATSD_ADDR=localhost:8125 K6_STATSD_ENABLE_TAGS=true k6 run --out statsd PATH_TO_K6_SCENARIO
+$ k6 run --out influxdb=http://localhost:8086/k6 PATH_TO_K6_SCENARIO
 ```
 
 Then open http://localhost:3000 and explore Prometheus metrics starting with `k6_`.

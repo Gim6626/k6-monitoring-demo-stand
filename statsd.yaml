@@ -1,5 +1,0 @@
-defaults:
-  ttl: 30
-mappings:
-  - match: "k6.*"
-    name: "k6_${1}"
