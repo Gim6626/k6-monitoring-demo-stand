@@ -18,7 +18,7 @@ Replace `PATH_TO_K6_SCENARIO` with path to your scenario and run:
 $ k6 run --out influxdb=http://localhost:8086/k6 PATH_TO_K6_SCENARIO
 ```
 
-Then open http://localhost:3000 and explore metrics starting with `k6_`.
+Then open http://localhost:3000 and explore k6 standard and your scenario custom metrics.
 
 # Note
 
