@@ -24,7 +24,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "iteration": 1660136386102,
+  "id": 1,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -56,6 +56,8 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
@@ -136,7 +138,8 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
-          "placement": "bottom"
+          "placement": "bottom",
+          "showLegend": true
         },
         "tooltip": {
           "mode": "single",
@@ -249,6 +252,8 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
@@ -304,7 +309,8 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
-          "placement": "bottom"
+          "placement": "bottom",
+          "showLegend": true
         },
         "tooltip": {
           "mode": "single",
@@ -375,6 +381,8 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
@@ -430,7 +438,8 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
-          "placement": "bottom"
+          "placement": "bottom",
+          "showLegend": true
         },
         "tooltip": {
           "mode": "single",
@@ -542,8 +551,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -565,7 +573,8 @@
             "legend": {
               "calcs": [],
               "displayMode": "list",
-              "placement": "bottom"
+              "placement": "bottom",
+              "showLegend": true
             },
             "tooltip": {
               "mode": "single",
@@ -658,8 +667,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -681,7 +689,8 @@
             "legend": {
               "calcs": [],
               "displayMode": "list",
-              "placement": "bottom"
+              "placement": "bottom",
+              "showLegend": true
             },
             "tooltip": {
               "mode": "single",
@@ -750,8 +759,7 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green",
-                    "value": null
+                    "color": "green"
                   },
                   {
                     "color": "red",
@@ -773,7 +781,8 @@
             "legend": {
               "calcs": [],
               "displayMode": "list",
-              "placement": "bottom"
+              "placement": "bottom",
+              "showLegend": true
             },
             "tooltip": {
               "mode": "single",
@@ -830,6 +839,8 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
@@ -901,7 +912,7 @@
       },
       "gridPos": {
         "h": 8,
-        "w": 6,
+        "w": 12,
         "x": 0,
         "y": 27
       },
@@ -910,7 +921,8 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
-          "placement": "bottom"
+          "placement": "bottom",
+          "showLegend": true
         },
         "tooltip": {
           "mode": "single",
@@ -1014,7 +1026,13 @@
               }
             ]
           ],
-          "tags": []
+          "tags": [
+            {
+              "key": "subscenario",
+              "operator": "=~",
+              "value": "/^$subscenario$/"
+            }
+          ]
         }
       ],
       "title": "Duration Trend $subscenario",
@@ -1031,6 +1049,8 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
@@ -1077,7 +1097,7 @@
       },
       "gridPos": {
         "h": 8,
-        "w": 6,
+        "w": 12,
         "x": 0,
         "y": 35
       },
@@ -1086,7 +1106,8 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
-          "placement": "bottom"
+          "placement": "bottom",
+          "showLegend": true
         },
         "tooltip": {
           "mode": "single",
@@ -1148,7 +1169,13 @@
               }
             ]
           ],
-          "tags": []
+          "tags": [
+            {
+              "key": "subscenario",
+              "operator": "=~",
+              "value": "/^$subscenario$/"
+            }
+          ]
         }
       ],
       "title": "RPS by Requests Counter $subscenario",
@@ -1165,6 +1192,8 @@
             "mode": "palette-classic"
           },
           "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
             "axisLabel": "",
             "axisPlacement": "left",
             "axisSoftMax": 1.1,
@@ -1213,7 +1242,7 @@
       },
       "gridPos": {
         "h": 8,
-        "w": 6,
+        "w": 12,
         "x": 0,
         "y": 43
       },
@@ -1222,7 +1251,8 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
-          "placement": "bottom"
+          "placement": "bottom",
+          "showLegend": true
         },
         "tooltip": {
           "mode": "single",
@@ -1284,7 +1314,13 @@
               }
             ]
           ],
-          "tags": []
+          "tags": [
+            {
+              "key": "subscenario",
+              "operator": "=~",
+              "value": "/^$subscenario$/"
+            }
+          ]
         }
       ],
       "title": "Success Rate $subscenario",
@@ -1292,7 +1328,7 @@
     }
   ],
   "refresh": false,
-  "schemaVersion": 36,
+  "schemaVersion": 37,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -1311,17 +1347,13 @@
           "type": "influxdb",
           "uid": "${data_source}"
         },
-        "definition": "label_values({__name__=~\"k6_http_req_duration| k6_http_reqs| k6_http_req_failed\"}, instance)",
-        "error": {},
+        "definition": "SHOW TAG VALUES WITH KEY = \"instance\"",
         "hide": 0,
         "includeAll": true,
         "multi": true,
         "name": "worker_instance",
         "options": [],
-        "query": {
-          "query": "label_values({__name__=~\"k6_http_req_duration| k6_http_reqs| k6_http_req_failed\"}, instance)",
-          "refId": "StandardVariableQuery"
-        },
+        "query": "SHOW TAG VALUES WITH KEY = \"instance\"",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -1330,7 +1362,7 @@
       },
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": [
             "All"
           ],
@@ -1342,18 +1374,14 @@
           "type": "influxdb",
           "uid": "${data_source}"
         },
-        "definition": "label_values({__name__=~\"k6_Duration_Trend| k6_Success_Rate| k6_Requests_Counter\"}, subscenario)",
-        "error": {},
+        "definition": "SHOW TAG VALUES WITH KEY = \"subscenario\"",
         "hide": 0,
         "includeAll": true,
         "multi": true,
         "name": "subscenario",
         "options": [],
-        "query": {
-          "query": "label_values({__name__=~\"k6_Duration_Trend| k6_Success_Rate| k6_Requests_Counter\"}, subscenario)",
-          "refId": "StandardVariableQuery"
-        },
-        "refresh": 1,
+        "query": "SHOW TAG VALUES WITH KEY = \"subscenario\"",
+        "refresh": 2,
         "regex": "",
         "skipUrlSync": false,
         "sort": 0,
@@ -1388,6 +1416,6 @@
   "timezone": "",
   "title": "Universal k6 Load&Performance Testing Dashboard (client-side metrics)",
   "uid": "HnJxxSLnk",
-  "version": 20,
+  "version": 21,
   "weekStart": ""
 }
