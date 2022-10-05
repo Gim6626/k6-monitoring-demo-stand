@@ -20,7 +20,8 @@ Replace `PATH_TO_K6_SCENARIO` with path to your scenario and run:
 $ k6 run --out influxdb=http://localhost:8086/k6 PATH_TO_K6_SCENARIO
 ```
 
-Then open http://localhost:3000 and explore k6 standard and your scenario custom metrics.
+Then open [local Grafana instance](http://localhost:3000) (`admin`/`admin`) and explore k6 standard and your scenario
+custom metrics.
 
 How dashboard could look like for scenario with 1 worker and 2 subscenarios:
 
